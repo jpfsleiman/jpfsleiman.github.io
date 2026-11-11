@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="wrap article">
+  <header class="article__head">
+    <p class="article__kind">
+      {{ page.kind }}{% if page.publication %}, {{ page.publication }}{% endif %}
+      {% if page.placeholder %}<span class="badge">Placeholder</span>{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    <p class="article__date"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    {% if page.external_url %}
+    <p class="article__source">First published in {{ page.publication | default: "the original outlet" }}. <a href="{{ page.external_url }}">Read it there</a>.</p>
+    {% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <footer class="article__foot">
+    {% if page.topics %}
+    <p>{% for topic in page.topics %}<a class="topic" href="{{ '/topics/' | relative_url }}#{{ topic | slugify }}">{{ topic }}</a>{% endfor %}</p>
+    {% endif %}
+    {% if page.kind == "Op-ed" %}
+    <p><a href="{{ '/writing/' | relative_url }}">All writing</a></p>
+    {% else %}
+    <p><a href="{{ '/hill/' | relative_url }}">All posts from the Hill</a></p>
+    {% endif %}
+  </footer>
+</article>

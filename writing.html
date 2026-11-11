@@ -1,0 +1,40 @@
+---
+layout: page
+title: Writing
+permalink: /writing/
+lede: Op-eds and policy writing on federal science funding, energy, natural hazards, and space exploration.
+---
+<section class="section">
+  <div class="section__head">
+    <h2>Policy memo</h2>
+  </div>
+  <ul class="pubs">
+    {% for pub in site.data.publications %}
+      {% if pub.type != "policy" %}{% continue %}{% endif %}
+      <li>
+        <span class="pubs__title">{{ pub.title }}</span>
+        <span class="pubs__detail">{{ pub.authors }} ({{ pub.year }}). <em>{{ pub.venue }}</em>{% if pub.volume %}, {{ pub.volume }}{% endif %}.</span>
+        {% if pub.url %}<span class="pubs__links"><a href="{{ pub.url }}">Read the memo</a></span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section">
+  <div class="section__head">
+    <h2>Op-eds</h2>
+    <a href="{{ '/topics/' | relative_url }}">Browse by topic</a>
+  </div>
+  <p class="section__note">I wrote 15 science policy op-eds for the <em>Campus Times</em> at the University of Rochester between August 2025 and August 2026.</p>
+  <ul class="entries">
+    {% assign opeds = site.opeds | sort: "date" | reverse %}
+    {% assign shown = 0 %}
+    {% for oped in opeds %}
+      {% if oped.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+      {% assign entry = oped %}
+      {% include entry-row.html %}
+      {% assign shown = shown | plus: 1 %}
+    {% endfor %}
+  </ul>
+  {% if shown == 0 %}<p class="empty">Op-eds are being added.</p>{% endif %}
+</section>

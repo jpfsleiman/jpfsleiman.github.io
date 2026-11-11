@@ -1,70 +1,46 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>CV</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+---
+layout: page
+title: Résumé
+permalink: /cv.html
+lede: Policy experience first, then research, volunteering, and education.
+---
+<section class="section">
+  <div class="actions" style="margin-top:0">
+    <a class="button" href="{{ site.resume_file | relative_url }}">Download my résumé (PDF)</a>
+    <a class="button button--quiet" href="{{ site.author.linkedin }}">See my LinkedIn</a>
+  </div>
+  <p class="section__note" style="margin-top:1.5rem"><strong>Policy interests:</strong> energy and grid reliability; natural hazards and disaster preparedness; public lands, national parks, and cultural preservation; museums, libraries, and public media; water and natural resources; critical minerals and recycling; federal science agencies; STEM education; Tribal issues.</p>
+</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<section class="section">
+  <div class="section__head">
+    <h2>Experience</h2>
+  </div>
+  {% assign rows = site.data.resume.experience %}
+  {% include resume-list.html %}
+</section>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="cv.html" class="logo">Curriculum Vitae</a>
-					</header>
+<section class="section">
+  <div class="section__head">
+    <h2>Volunteering</h2>
+  </div>
+  {% assign rows = site.data.resume.volunteering %}
+  {% include resume-list.html %}
+</section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="research.html">Research</a></li>
-							<li><a href="about.html">About</a></li>
-							<li class="active"><a href="cv.html">Curriculum Vitae</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-								<li><a href="https://github.com/jpfsleiman" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/jpfsleiman/" class="icon brands alt fa-linkedin-square" target="_blank"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://orcid.org/0009-0002-8527-9057" class="icon brands alt fa-orcid" target="_blank"><span class="label">ORCID</span></a></li>
-						</ul>
-						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					</nav>
+<section class="section">
+  <div class="section__head">
+    <h2>Education</h2>
+  </div>
+  {% assign rows = site.data.resume.education %}
+  {% include resume-list.html %}
+</section>
 
-    <!-- Main Content -->
-    <div id="main">
-
-        <!-- Post Section -->
-        <section class="post">
-            <header class="major">
-                <h2>Download My CV</h2>
-            </header>
-            <p>Click <a href="images/cv.pdf" download="cv.pdf">here</a> to download a copy of my CV.</p>
-        </section>
-
-    </div>
-
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; J.P. F. Sleiman</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
-
-
+<section class="section">
+  <div class="section__head">
+    <h2>Other documents</h2>
+  </div>
+  <ul class="plain-list">
+    <li><a href="{{ '/My-One-Pager.pdf' | relative_url }}">Congressional one-pager on hillslope stability (PDF, 2024)</a> <span>The leave-behind I used in congressional meetings.</span></li>
+  </ul>
+</section>

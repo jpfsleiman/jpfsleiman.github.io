@@ -1,0 +1,40 @@
+# The three layers of the career column on the About page, newest first.
+#   rock: sand | lime | shale  (which pattern fills the strip)
+#   found: things that happened inside that chapter
+
+- years: "2026 to now"
+  rock: sand
+  title: "AGI/AAAS Congressional Science & Engineering Fellow"
+  place: "U.S. House of Representatives, office of Rep. Paul D. Tonko (NY-20), Washington, DC"
+  points:
+    - Help write legislation
+    - Provide policy analysis through memos and speeches for hearings, events, briefings, and meetings
+    - Help draft oversight letters and briefing memos and prepare hearing questions
+    - Support the Member's committee and caucus roles, including Energy and Commerce, the Museum Caucus, and the Rare Disease Caucus
+    - Write one-pagers, section-by-sections, and Dear Colleague letters for non-technical readers
+
+- years: "2021 to 2026"
+  rock: lime
+  title: "Ph.D., Geophysics"
+  place: "University of Rochester, Rochester, NY (M.S., Geological Sciences, 2023)"
+  points:
+    - Studied slow-moving soil and landslide hazards on Earth and Mars with satellite radar, LiDAR, and machine learning
+    - Collaborated with Norway's national ground-motion monitoring program
+  found:
+    - "Science policy opinion writer, Campus Times: 15 op-eds (2025 to 2026)"
+    - "Local Science Partner, American Geophysical Union: outreach to congressional offices in South Carolina and New York (volunteer, 2025 to 2026)"
+    - "Data analysis intern, NASA GLOBE Program (2025)"
+    - "Science advisor, Save Paris Mountain, Greenville, SC (volunteer, 2025 to 2026)"
+    - "President, AS&E Graduate Student Association (2024 to 2025)"
+    - "Climate modeling and software intern, StormImpact (2022)"
+
+- years: "2017 to 2021"
+  rock: shale
+  title: "B.S., Physics and Geology"
+  place: "Furman University, Greenville, SC"
+  points:
+    - Graduated cum laude; Wallace C. Fallaw Outstanding Senior Award
+    - Undergraduate research on supernova remnants, mineral records of past climate, and watershed mapping for an endangered plant with USFWS and SC DNR
+  found:
+    - "Co-owner, Cork and Tap, a wine bar in downtown Greenville (2019 to 2021)"
+    - "Planetarium educator, Roper Mountain Science Center (volunteer, 2017 to 2021)"

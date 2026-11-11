@@ -1,0 +1,13 @@
+# The menu. Add, remove, or reorder lines here and every page updates.
+- title: On the Hill
+  url: /hill/
+- title: Writing
+  url: /writing/
+- title: Research
+  url: /research.html
+- title: Field notes
+  url: /field-notes/
+- title: About
+  url: /about.html
+- title: Résumé
+  url: /cv.html

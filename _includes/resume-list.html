@@ -1,0 +1,21 @@
+{% comment %}
+  One section of the Résumé page. The page sets a variable named "rows"
+  (a list from _data/resume.yml) before including this file.
+{% endcomment %}
+<ol class="cv">
+  {% for row in rows %}
+  <li class="cv__row">
+    <div class="cv__years">{{ row.years }}</div>
+    <div class="cv__body">
+      <h3>{{ row.title }}</h3>
+      <p class="cv__org">{{ row.org }}{% if row.where %}, {{ row.where }}{% endif %}</p>
+      {% if row.summary %}<p>{{ row.summary }}</p>{% endif %}
+      {% if row.points %}
+      <ul>
+        {% for point in row.points %}<li>{{ point }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>

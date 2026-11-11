@@ -1,0 +1,27 @@
+---
+layout: page
+title: Field notes
+permalink: /field-notes/
+lede: Photos from field work, the lab, and science trips.
+---
+<section class="section">
+  <ul class="gallery">
+    {% for photo in site.data.photos %}
+      {% if photo.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+      <li>
+        <figure>
+          {% if photo.image %}
+          <a href="{{ '/assets/img/' | append: photo.image | relative_url }}"><img src="{{ '/assets/img/' | append: photo.image | relative_url }}" alt="{{ photo.alt }}" loading="lazy"></a>
+          {% else %}
+          <div class="gallery__empty">Photo to come</div>
+          {% endif %}
+          <figcaption>
+            {{ photo.caption }}
+            {% if photo.placeholder %}<span class="badge">Placeholder</span>{% endif %}
+            {% if photo.where %}<span class="gallery__where">{{ photo.where }}</span>{% endif %}
+          </figcaption>
+        </figure>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

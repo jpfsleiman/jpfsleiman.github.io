@@ -1,0 +1,55 @@
+---
+layout: page
+title: Topics
+permalink: /topics/
+lede: Posts and op-eds grouped by issue.
+---
+{% comment %}
+  This page builds itself from the "topics" line at the top of each post
+  and op-ed. Nothing here needs editing when you add new writing.
+{% endcomment %}
+{% assign opeds = site.opeds | sort: "date" | reverse %}
+{% assign topics = "" | split: "" %}
+{% for entry in site.posts %}
+  {% if entry.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+  {% for topic in entry.topics %}
+    {% unless topics contains topic %}{% assign topics = topics | push: topic %}{% endunless %}
+  {% endfor %}
+{% endfor %}
+{% for entry in opeds %}
+  {% if entry.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+  {% for topic in entry.topics %}
+    {% unless topics contains topic %}{% assign topics = topics | push: topic %}{% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign topics = topics | sort_natural %}
+
+{% if topics.size == 0 %}
+<section class="section">
+  <p class="empty">Topics appear here once posts and op-eds are published.</p>
+</section>
+{% else %}
+<section class="section">
+  <ul class="topic-index">
+    {% for topic in topics %}<li><a class="topic" href="#{{ topic | slugify }}">{{ topic }}</a></li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% for topic in topics %}
+<section class="section" id="{{ topic | slugify }}">
+  <div class="section__head">
+    <h2>{{ topic | capitalize }}</h2>
+  </div>
+  <ul class="entries">
+    {% for entry in site.posts %}
+      {% if entry.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+      {% if entry.topics contains topic %}{% include entry-row.html %}{% endif %}
+    {% endfor %}
+    {% for entry in opeds %}
+      {% if entry.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+      {% if entry.topics contains topic %}{% include entry-row.html %}{% endif %}
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

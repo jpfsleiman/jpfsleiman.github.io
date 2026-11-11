@@ -1,0 +1,18 @@
+{% comment %}
+  One row in a list of posts or op-eds. The page that includes this file
+  sets a variable named "entry" first (see index.html for an example).
+{% endcomment %}
+{% assign entry_link = entry.url | relative_url %}
+{% if entry.external_url %}{% assign entry_link = entry.external_url %}{% endif %}
+<li class="entry">
+  <time class="entry__date" datetime="{{ entry.date | date: '%Y-%m-%d' }}">{{ entry.date | date: "%b %-d, %Y" }}</time>
+  <div class="entry__body">
+    <h3 class="entry__title"><a href="{{ entry_link }}">{{ entry.title }}</a></h3>
+    {% if entry.summary %}<p class="entry__summary">{{ entry.summary }}</p>{% endif %}
+    <p class="entry__meta">
+      {% if entry.placeholder %}<span class="badge">Placeholder</span>{% endif %}
+      {% if entry.publication %}<span>{{ entry.publication }}</span>{% endif %}
+      {% for topic in entry.topics %}<a class="topic" href="{{ '/topics/' | relative_url }}#{{ topic | slugify }}">{{ topic }}</a>{% endfor %}
+    </p>
+  </div>
+</li>

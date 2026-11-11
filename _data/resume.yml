@@ -1,0 +1,128 @@
+# Everything on the Résumé page, in the same order as LinkedIn.
+# To add a job, copy a block under "experience" and change the details.
+#   years:   shown in the left column
+#   summary: optional sentence shown before the bullet points
+#   points:  optional bullet points
+
+experience:
+  - title: "AGI/AAAS Congressional Science & Engineering Fellow"
+    org: "U.S. House of Representatives, office of Rep. Paul D. Tonko (NY-20)"
+    where: "Washington, DC"
+    years: "2026 to now"
+    summary: >-
+      Congressional Fellow in the AAAS Science & Technology Policy Fellowships,
+      sponsored by the American Geosciences Institute as the William L. Fisher
+      Congressional Geoscience Fellow.
+    points:
+      - Help write legislation
+      - Provide policy analysis through memos and speeches for hearings, events, briefings, and meetings
+      - Help draft oversight letters and briefing memos and prepare hearing questions; serve as a point of contact for stakeholders
+      - Support the Member's committee and caucus roles, including Energy and Commerce, the Museum Caucus, and the Rare Disease Caucus
+      - Work with agencies, constituents, and stakeholders on energy, natural resources, public lands, cultural preservation, museums and libraries, critical minerals and recycling, and Tribal issues
+      - Write one-pagers, section-by-sections, and Dear Colleague letters for non-technical readers
+
+  - title: "Science Policy Opinion Writer"
+    org: "Campus Times, University of Rochester"
+    where: "Rochester, NY"
+    years: "2025 to 2026"
+    points:
+      - Wrote 15 op-eds on federal science funding, energy policy, natural hazards, and space exploration for a university-wide audience
+
+  - title: "Doctoral Researcher, Geophysics"
+    org: "University of Rochester"
+    where: "Rochester, NY"
+    years: "2021 to 2026"
+    points:
+      - Studied slow-moving soil and landslide hazards on Earth and Mars; collaborated with Norway's national ground-motion monitoring program
+      - Built automated pipelines analyzing terrain and satellite imagery across 30+ field sites and 3,000+ mapped landforms, linking hazard patterns to temperature and precipitation with machine learning
+      - Mentored three undergraduate researchers on applied mapping projects
+      - Teaching assistant for Hydrology and Water Resources, Environmental Geochemistry, Geomechanics, Earth Surface Processes, Sediment Transport, Physics of Climate, and Planetary Science
+
+  - title: "Data Analysis Intern"
+    org: "NASA GLOBE Program"
+    where: "Remote"
+    years: "2025"
+    points:
+      - Processed and analyzed 4+ million soil moisture and temperature measurements collected by students and educators worldwide
+      - Tested whether the soil dataset has the coverage needed to detect long-term trends, and identified the schools with enough sustained data to be usable
+      - Conducted outreach to schools and organizations and advised educators on sustaining long-term data quality
+
+  - title: "Climate Modeling and Software Intern"
+    org: "StormImpact"
+    years: "2022"
+    points:
+      - Helped build a cloud-based machine learning tool that predicts storm-driven power outages for utility companies and guides emergency crew deployment
+
+  - title: "Co-owner"
+    org: "Cork and Tap"
+    where: "Greenville, SC"
+    years: "2019 to 2021"
+    points:
+      - Operated a wine bar in downtown Greenville, overseeing daily operations, staffing, licensing and compliance, vendor relations, and marketing
+
+  - title: "Undergraduate Researcher and Lab Assistant"
+    org: "Furman University"
+    where: "Greenville, SC"
+    years: "2018 to 2021"
+    points:
+      - Built mapping models with USFWS and SC DNR to assess how construction threatened an endangered plant species
+      - Ran mineral-growth experiments funded by the SC NASA Space Grant Consortium
+      - Analyzed X-ray and radio telescope data on supernova remnants and wrote a funded proposal for telescope time
+      - Ran astronomy and general physics labs and tutored physics students
+
+volunteering:
+  - title: "Local Science Partner"
+    org: "American Geophysical Union"
+    years: "2025 to 2026"
+    points:
+      - Conducted direct outreach to congressional offices in South Carolina and New York, organized district meetings and town halls, and helped secure signatures on Dear Colleague letters supporting federal science funding
+      - Prepared appropriations request forms for NASA, NOAA, NSF, USGS, DOE, and NIEHS, along with one-pagers and state-level fact sheets used in congressional meetings
+      - Partnered with Rochester, NY, city officials on a citywide urban forestry initiative supported by US Forest Service funding
+
+  - title: "Science Advisor"
+    org: "Save Paris Mountain"
+    where: "Greenville, SC"
+    years: "2025 to 2026"
+    points:
+      - Advised a community campaign on land use around Paris Mountain, contributing watershed and slope impact analysis for public and local government engagement
+
+  - title: "Solar System Ambassador"
+    org: "NASA Jet Propulsion Laboratory"
+    years: "2019 to now"
+    points:
+      - Deliver public talks translating NASA research for audiences in schools, parks, libraries, and colleges across South Carolina and upstate New York
+
+  - title: "Speech and Debate Coach"
+    org: "High school programs in South Carolina and New York"
+    years: "2017 to now"
+    points:
+      - Founded and coach competitive programs in under-resourced high schools, training students in Congressional and World Schools Debate and leading multiple teams to qualify for national tournaments
+
+  - title: "Planetarium Educator"
+    org: "Roper Mountain Science Center"
+    where: "Greenville, SC"
+    years: "2017 to 2021"
+    points:
+      - Developed educator guides aligning planetarium shows with South Carolina K–12 science standards
+
+education:
+  - title: "Ph.D., Geophysics"
+    org: "University of Rochester"
+    years: "2026"
+    summary: >-
+      Dissertation on slow-moving slope hazards in permafrost regions on Earth
+      and Mars, using satellite radar, LiDAR, and machine learning. Advisor:
+      Dr. Rachel Glade.
+    points:
+      - "President, AS&E Graduate Student Association (2024 to 2025)"
+
+  - title: "M.S., Geological Sciences"
+    org: "University of Rochester"
+    years: "2023"
+
+  - title: "B.S., Physics and Geology"
+    org: "Furman University"
+    years: "2021"
+    summary: >-
+      Cum laude. Wallace C. Fallaw Outstanding Senior Award; Sigma Pi Sigma
+      National Physics Honor Society.

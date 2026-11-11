@@ -1,0 +1,19 @@
+---
+layout: page
+title: On the Hill
+permalink: /hill/
+lede: Notes on working in Congress as a scientist, and on how science reaches the people who write policy.
+---
+<section class="section">
+  <p class="section__note"><a href="{{ '/topics/' | relative_url }}">Browse by topic</a></p>
+  <ul class="entries">
+    {% assign shown = 0 %}
+    {% for post in site.posts %}
+      {% if post.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+      {% assign entry = post %}
+      {% include entry-row.html %}
+      {% assign shown = shown | plus: 1 %}
+    {% endfor %}
+  </ul>
+  {% if shown == 0 %}<p class="empty">The first posts are on the way.</p>{% endif %}
+</section>

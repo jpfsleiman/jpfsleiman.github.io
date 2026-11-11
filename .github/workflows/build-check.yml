@@ -1,0 +1,17 @@
+# Builds the site the same way GitHub Pages does, on every pull request,
+# so a broken template shows up as a red X before anything goes live.
+name: Build check
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site

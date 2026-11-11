@@ -1,0 +1,51 @@
+# One entry per paper or memo. Copy a block, change the details, save.
+#   type:   policy | research
+#   status: published | in review | in preparation
+#   url:    link to the paper (DOI link preferred). Leave out if there is none yet.
+#   pdf:    optional path to a PDF you are allowed to host, e.g. /assets/files/my-paper.pdf
+
+- title: "Securing NASA's Planetary Data Legacy: The Case for Renewed RPIF Network Support"
+  authors: "Sleiman, J. P."
+  year: 2026
+  venue: "Journal of Science Policy & Governance"
+  volume: "28(1)"
+  type: policy
+  status: published
+  url: "https://doi.org/10.38126/JSPG280105"
+
+- title: "Exploring potential mechanisms for the initiation of solifluction patterns"
+  authors: "Glade, R. C., Sleiman, J. P., Quillen, A., Cunez, F. D., & Williams, S."
+  year: 2026
+  venue: "AGU Advances"
+  type: research
+  status: published
+  # url: add the DOI link here
+
+- title: "Viewing lobate patterns on Mars and Earth as climate-modulated fluid-like instabilities"
+  authors: "Sleiman, J. P., Johnsson, A., Wray, J., Conway, S., & Glade, R. C."
+  year: 2025
+  venue: "Icarus"
+  type: research
+  status: published
+  # url: add the DOI link here
+
+- title: "An InSAR-based analysis of climate controls on solifluction velocities and morphology in Norway"
+  authors: "Sleiman, J. P., Aslan, G., Del Vecchio, J., & Glade, R. C."
+  year: 2025
+  venue: "The Cryosphere"
+  type: research
+  status: in review
+
+- title: "Magnesian calcite as a paleoenvironmental indicator"
+  authors: "Romanek, C., Sleiman, J. P., Freyermuth, M., & Sanchez, R."
+  year: 2025
+  venue: "Geology"
+  type: research
+  status: in review
+
+- title: "Radio observations of galactic supernova remnants"
+  authors: "Moffett, D., Sleiman, J. P., et al."
+  year: 2025
+  venue: "Manuscript"
+  type: research
+  status: in preparation

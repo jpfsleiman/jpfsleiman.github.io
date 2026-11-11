@@ -1,108 +1,96 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+<div class="wrap">
 
-<html>
-	<head>
-		<title>JohnPaul Francois Sleiman - Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <section class="hero">
+    <div>
+      <h1>JohnPaul Sleiman, Ph.D.</h1>
+      <p class="hero__role">AGI/AAAS Congressional Science &amp; Engineering Fellow, U.S. House of Representatives</p>
+      <p class="hero__lede">I'm a scientist working in Congress. I help write legislation and turn technical material into something a busy office can act on.</p>
+      <div class="actions">
+        <a class="button" href="{{ site.resume_file | relative_url }}">Download my résumé (PDF)</a>
+        <a class="button button--quiet" href="{{ '/about.html#contact' | relative_url }}">Contact me</a>
+      </div>
+    </div>
+    <figure class="hero__photo">
+      <img src="{{ '/assets/img/portrait.jpg' | relative_url }}" alt="JohnPaul Sleiman smiling in field gear on open tundra, with a mountain behind him" width="1064" height="1200">
+      <figcaption>In the field, before the Hill.</figcaption>
+    </figure>
+  </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<div id="intro">
-						<h1>JohnPaul Francois Sleiman </h1>
-						<p>Geophysics PhD Candidate, M.S Geoscience, & B.S Physics</p>
-						<p>University of Rochester</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Home</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="research.html">Research</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="cv.html">Curriculum Vitae</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-								<li><a href="https://github.com/jpfsleiman" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/jpfsleiman/" class="icon brands alt fa-linkedin-square" target="_blank"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://orcid.org/0009-0002-8527-9057" class="icon brands alt fa-orcid" target="_blank"><span class="label">ORCID</span></a></li>
-						</ul>
-						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					</nav>
-
-<!-- Main -->
-<div id="main">
-
-    <!-- Featured Post -->
-    <article class="post featured">
-        <header class="major">
-            <h2>Welcome!</h2>
-        </header>
-        <p>Hi, I'm JohnPaul, and I'm currently a fourth-year PhD candidate in Geophysics at the University of Rochester. I study near-surface processes, with a focus on hill slope diffusion in permafrost-rich environments and other planetary bodies. 
-            I'm passionate about science communication and science policy, working to bridge the gap between technical jargon in the scientific world and accessible information. My goal is to help create informed, sound science policies that guide decision-making and support sustainable goals.</p>
-    </article>
-
-<!-- Posts -->
-<section class="posts">
-    <article>
-        <header>
-            <h2><a href="agu_congressional_visits_days.html">My Experience at AGU's Congressional Visits Days</a></h2>
-        </header>
-    </article>
-
-    <article>
-        <header>
-            <h2><a href="one_pager_on_my_work.html">Writing a One-Pager Based on My Work</a></h2>
-        </header>
-    </article>
-</section>
-
-    <article>
-        <header>
-            <h2><a href="My-One-Pager.pdf">My Perosnal One Pager</a></h2>
-        </header>
-    </article>
-</section>
-
-
-				<!-- Footer -->
-				
-
-<!-- Copyright -->
-<div id="copyright">
-    <ul>
-        <li>&copy; J.P.F. Sleiman</li>
-        <li>All rights reserved.</li>
+  <section class="section">
+    <div class="section__head">
+      <h2>What I work on</h2>
+    </div>
+    <p class="section__note">I serve in the office of Representative Paul D. Tonko (NY-20) as one of about 30 Congressional Fellows nationwide in the AAAS Science &amp; Technology Policy Fellowships. My portfolio covers:</p>
+    <ul class="portfolio">
+      <li>Energy</li>
+      <li>Water and natural resources</li>
+      <li>National parks and cultural preservation</li>
+      <li>Museums and libraries</li>
+      <li>Critical minerals and battery recycling</li>
+      <li>Tribal issues</li>
     </ul>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <h2>From the Hill</h2>
+      <a href="{{ '/hill/' | relative_url }}">All posts</a>
+    </div>
+    <ul class="entries">
+      {% assign shown = 0 %}
+      {% for post in site.posts %}
+        {% if post.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+        {% if shown >= 3 %}{% break %}{% endif %}
+        {% assign entry = post %}
+        {% include entry-row.html %}
+        {% assign shown = shown | plus: 1 %}
+      {% endfor %}
+    </ul>
+    {% if shown == 0 %}<p class="empty">The first posts are on the way.</p>{% endif %}
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <h2>Op-eds and policy writing</h2>
+      <a href="{{ '/writing/' | relative_url }}">All writing</a>
+    </div>
+    <ul class="entries">
+      {% assign opeds = site.opeds | sort: "date" | reverse %}
+      {% assign shown = 0 %}
+      {% for oped in opeds %}
+        {% if oped.placeholder and site.show_placeholders != true %}{% continue %}{% endif %}
+        {% if shown >= 3 %}{% break %}{% endif %}
+        {% assign entry = oped %}
+        {% include entry-row.html %}
+        {% assign shown = shown | plus: 1 %}
+      {% endfor %}
+    </ul>
+    {% if shown == 0 %}<p class="empty">Op-eds are being added.</p>{% endif %}
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <h2>Research</h2>
+      <a href="{{ '/research.html' | relative_url }}">All research</a>
+    </div>
+    <ul class="pubs">
+      {% assign shown = 0 %}
+      {% for pub in site.data.publications %}
+        {% if pub.status != "published" or pub.type != "research" %}{% continue %}{% endif %}
+        {% if shown >= 2 %}{% break %}{% endif %}
+        <li>
+          <span class="pubs__title">{{ pub.title }}</span>
+          <span class="pubs__detail">{{ pub.authors }} ({{ pub.year }}). <em>{{ pub.venue }}</em>.</span>
+          {% if pub.url %}<span class="pubs__links"><a href="{{ pub.url }}">Read the paper</a></span>{% endif %}
+        </li>
+        {% assign shown = shown | plus: 1 %}
+      {% endfor %}
+    </ul>
+  </section>
+
 </div>
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
-
-
-
-

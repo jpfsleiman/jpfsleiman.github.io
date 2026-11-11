@@ -1,0 +1,40 @@
+# One entry per photo on the Field notes page.
+# Put the image file in assets/img/ and add a block here.
+#   image:       file name inside assets/img/
+#   alt:         one plain sentence describing the picture, for screen readers
+#   caption:     what the visitor reads under the photo
+#   where:       place and year (optional)
+#   placeholder: true marks the entry with a badge until you finish it
+# A block with no "image" line draws an empty tile, to hold a spot.
+
+- image: nome-fieldwork.jpg
+  alt: Two researchers kneeling on a grassy tundra slope taking measurements beside their packs
+  caption: Field work on the tundra.
+  where: Nome, Alaska
+
+- image: tundra.jpg
+  alt: JohnPaul standing beside a gravel road with rolling green tundra hills behind him
+  caption: "Caption needed: what were you doing here?"
+  where: "Place and year needed"
+  placeholder: true
+
+- image: freeze-thaw-box.jpg
+  alt: A wooden box lined with plastic sheeting and filled with dark soil, a small shovel resting on top and sensor cables running in
+  caption: Filling a soil box for the freeze-thaw experiments.
+  where: University of Rochester
+
+- image: mars-patterned-ground.jpg
+  alt: Black and white orbital image of a crater on Mars with textured slopes
+  caption: A crater on Mars from the lobate features project.
+  where: "Image credit needed"
+  placeholder: true
+
+- image: pleiades.jpg
+  alt: The Pleiades star cluster, bright blue stars wrapped in faint nebula against a dense star field
+  caption: The Pleiades.
+
+- caption: "Add a photo from a science trip"
+  placeholder: true
+
+- caption: "Add a photo from the Hill"
+  placeholder: true

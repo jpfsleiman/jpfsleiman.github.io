@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------
+# Site settings. GitHub Pages rebuilds the site whenever this
+# repository changes; no build step is needed on your computer.
+# ---------------------------------------------------------------
+title: JohnPaul Sleiman
+tagline: Science fellow in the U.S. House of Representatives
+description: >-
+  JohnPaul Sleiman, Ph.D., is a 2026-2027 AGI/AAAS Congressional Science &
+  Engineering Fellow. Writing, research, and notes from Capitol Hill.
+url: "https://jpfsleiman.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: JohnPaul Francois Sleiman
+  email: sleiman.johnpaul@gmail.com
+  linkedin: https://www.linkedin.com/in/jpfsleiman/
+  github: https://github.com/jpfsleiman
+  orcid: https://orcid.org/0009-0002-8527-9057
+
+resume_file: /assets/files/JohnPaul_Sleiman_Resume.pdf
+
+# Placeholder switch.
+# true  = placeholder posts, op-eds, and photos are shown with a "Placeholder" badge
+# false = they are hidden everywhere (delete the files once real ones replace them)
+show_placeholders: true
+
+# Posts live in _posts. Op-eds live in _opeds (one file per op-ed).
+permalink: /hill/:year/:month/:title/
+collections:
+  opeds:
+    output: true
+    permalink: /writing/:name/
+
+defaults:
+  - scope: { path: "", type: "posts" }
+    values: { layout: "post", kind: "From the Hill", nav: "/hill/" }
+  - scope: { path: "", type: "opeds" }
+    values: { layout: "post", kind: "Op-ed", nav: "/writing/" }
+
+markdown: kramdown
+timezone: America/New_York
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Leftovers from the old template. Safe to delete from the repository;
+# listed here so they are never published even if they are still around.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - images
+  - assets/sass
+  - assets/js
+  - assets/webfonts
+  - assets/css/main.css
+  - assets/css/noscript.css
+  - assets/css/fontawesome-all.min.css
